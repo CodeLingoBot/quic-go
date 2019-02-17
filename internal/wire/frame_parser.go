@@ -19,7 +19,7 @@ func NewFrameParser(v protocol.VersionNumber) FrameParser {
 	return &frameParser{version: v}
 }
 
-// ParseNextFrame parses the next frame
+// ParseNext: parses the next frame
 // It skips PADDING frames.
 func (p *frameParser) ParseNext(r *bytes.Reader, encLevel protocol.EncryptionLevel) (Frame, error) {
 	for r.Len() != 0 {

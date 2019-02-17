@@ -64,7 +64,7 @@ func init() {
 	})
 }
 
-// See https://en.wikipedia.org/wiki/Lehmer_random_number_generator
+// GeneratePRData: See https://en.wikipedia.org/wiki/Lehmer_random_number_generator
 func GeneratePRData(l int) []byte {
 	res := make([]byte, l)
 	seed := uint64(1)

@@ -92,7 +92,7 @@ func (w *responseWriter) Write(p []byte) (int, error) {
 
 func (w *responseWriter) Flush() {}
 
-// This is a NOP. Use http.Request.Context
+// CloseNotify is a NOP. Use http.Request.Context
 func (w *responseWriter) CloseNotify() <-chan bool { return make(<-chan bool) }
 
 // test that we implement http.Flusher
